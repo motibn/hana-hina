@@ -9,7 +9,9 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="חנה חינה | חוויה מרוקאית אותנטית לאירוע שלכם">
 <meta property="og:description" content="עמדת ספינג' ומופלטות מרוקאית בהכנה חיה לאירועים – חינה, חתונה ועוד. כשרות מהדרין, תפאורה מרהיבה ואנרגיה סוחפת.">
-<meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuDeZG2V9LIVTYM-9zFOLfb_5t0qQcRxWJ2OzzUY1H3L0Tl0WXyrlkua6MMmUUGEdAKWdq0FIgGx9ea1HyWLGdvwnCjf_yGVn2vWDfOJNmXcQJxViPZtQnqPvVNg7RZMRFLnqqiy9QwK0TcGJ4xJwDZJ4fVEv6cJyPl29jJLx-CEIe6mkgEvG76fuHBu_eIw5xeycAAS5rSF-mQg00MyKAhiNZ4PD0w4KOJyAd_xyIZSlH9jLeg5J4R_k5htarBIVFSpw4jZVCUpbXCi">
+<meta property="og:image" content="https://hana-henna.co.il/assets/images/hero/hero.jpg">
+<link rel="preload" as="image" href="/assets/images/hero/hero-mobile.webp" type="image/webp" media="(max-width: 639px)">
+<link rel="preload" as="image" href="/assets/images/hero/hero.webp" type="image/webp" media="(min-width: 640px)">
 <meta property="og:url" content="https://hana-henna.co.il/">
 <meta property="og:locale" content="he_IL">
 <script type="application/ld+json">
@@ -77,7 +79,61 @@
         }
 
         .hero-gradient {
-            background: linear-gradient(rgba(0,51,49,0.8), rgba(0,51,49,0.6));
+            background: linear-gradient(
+                165deg,
+                rgba(0,51,49,0.92) 0%,
+                rgba(0,51,49,0.7) 30%,
+                rgba(0,51,49,0.25) 55%,
+                rgba(0,51,49,0.05) 100%
+            );
+        }
+
+        .hero-img {
+            object-position: 50% 70%;
+        }
+
+        .hero-content {
+            max-width: 68%;
+            margin-inline-end: 0;
+        }
+
+        .hero-section {
+            min-height: 85svh;
+            padding-top: 5rem;
+            padding-bottom: 2rem;
+            align-items: flex-start;
+        }
+
+        @media (min-width: 640px) {
+            .hero-gradient {
+                background: linear-gradient(rgba(0,51,49,0.8), rgba(0,51,49,0.6));
+            }
+
+            .hero-img {
+                object-position: 65% center;
+            }
+
+            .hero-content {
+                max-width: 42rem;
+                margin-inline-start: auto;
+            }
+
+            .hero-section {
+                min-height: 75vh;
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+                align-items: center;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-img {
+                object-position: 60% center;
+            }
+
+            .hero-section {
+                min-height: 921px;
+            }
         }
 
         .accordion-content {
@@ -185,13 +241,18 @@
 </div>
 <main class="pb-20 sm:pb-0">
 <!-- Hero Section -->
-<section class="relative min-h-[60svh] sm:min-h-[75vh] lg:min-h-[921px] flex items-center overflow-hidden py-12 sm:py-16">
+<section class="hero-section relative flex overflow-hidden sm:py-16">
 <div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center" role="img" aria-label="עמדת מתוקים מרוקאית בהכנה חיה – ספינג' ומופלטות באירוע חגיגי" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDeZG2V9LIVTYM-9zFOLfb_5t0qQcRxWJ2OzzUY1H3L0Tl0WXyrlkua6MMmUUGEdAKWdq0FIgGx9ea1HyWLGdvwnCjf_yGVn2vWDfOJNmXcQJxViPZtQnqPvVNg7RZMRFLnqqiy9QwK0TcGJ4xJwDZJ4fVEv6cJyPl29jJLx-CEIe6mkgEvG76fuHBu_eIw5xeycAAS5rSF-mQg00MyKAhiNZ4PD0w4KOJyAd_xyIZSlH9jLeg5J4R_k5htarBIVFSpw4jZVCUpbXCi&quot;);"></div>
+<picture class="absolute inset-0 w-full h-full">
+<source media="(max-width: 639px)" srcset="/assets/images/hero/hero-mobile.webp" type="image/webp">
+<source media="(max-width: 639px)" srcset="/assets/images/hero/hero-mobile.jpg">
+<source srcset="/assets/images/hero/hero.webp" type="image/webp">
+<img src="/assets/images/hero/hero.jpg" alt="עינת, מייסדת חנה חינה, מגישה עמדת ספינג' ומופלטות מרוקאית באירוע חגיגי" class="w-full h-full object-cover hero-img" fetchpriority="high" decoding="async" width="1024" height="768">
+</picture>
 <div class="absolute inset-0 hero-gradient"></div>
 </div>
 <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile sm:px-gutter w-full">
-<div class="max-w-2xl text-on-primary">
+<div class="max-w-2xl text-on-primary hero-content">
 <span class="inline-flex items-center gap-2 bg-secondary-fixed text-on-secondary-fixed px-3 py-1 sm:px-4 rounded-full text-xs sm:text-label-md font-label-md mb-4 sm:mb-6">
 <span class="material-symbols-outlined text-[16px] sm:text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
                         כשרות מהדרין
