@@ -148,11 +148,10 @@
 
         .hero-gradient {
             background: linear-gradient(
-                to bottom left,
-                rgba(247,200,105,0.55) 0%,
-                rgba(247,200,105,0.3) 22%,
-                rgba(247,200,105,0.08) 48%,
-                rgba(247,200,105,0) 68%
+                to bottom,
+                rgba(28, 28, 24, 0.25) 0%,
+                rgba(28, 28, 24, 0.06) 35%,
+                transparent 60%
             );
         }
 
@@ -167,19 +166,32 @@
         }
 
         .hero-content {
-            max-width: 58%;
-            margin-inline-end: 0;
+            width: 100%;
+            max-width: 100%;
         }
 
-        .hero-content h1,
-        .hero-content p {
-            text-shadow: 0 1px 10px rgba(255, 255, 255, 0.35);
+        .hero-panel {
+            background: rgba(252, 249, 242, 0.94);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 1.25rem;
+            padding: 1.25rem 1.125rem;
+            box-shadow: 0 20px 50px -12px rgba(17, 111, 107, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.75);
+        }
+
+        .hero-panel h1 {
+            color: #0D5653;
+        }
+
+        .hero-panel .hero-subtitle {
+            color: #3f4948;
         }
 
         .hero-section {
             min-height: auto;
-            padding-top: 4.5rem;
-            padding-bottom: 1rem;
+            padding-top: 5rem;
+            padding-bottom: 1.5rem;
             align-items: flex-start;
         }
 
@@ -187,10 +199,9 @@
             .hero-gradient {
                 background: linear-gradient(
                     to left,
-                    rgba(247,200,105,0.62) 0%,
-                    rgba(247,200,105,0.28) 28%,
-                    rgba(247,200,105,0.06) 52%,
-                    rgba(247,200,105,0) 72%
+                    rgba(28, 28, 24, 0.3) 0%,
+                    rgba(28, 28, 24, 0.08) 32%,
+                    transparent 58%
                 );
             }
 
@@ -204,8 +215,13 @@
             }
 
             .hero-content {
-                max-width: 42rem;
+                max-width: 26rem;
                 margin-inline-start: auto;
+            }
+
+            .hero-panel {
+                padding: 2rem 1.75rem;
+                border-radius: 1.5rem;
             }
 
             .hero-section {
@@ -219,6 +235,14 @@
         @media (min-width: 1024px) {
             .hero-img {
                 object-position: 60% center;
+            }
+
+            .hero-content {
+                max-width: 30rem;
+            }
+
+            .hero-panel {
+                padding: 2.5rem 2.25rem;
             }
 
             .hero-section {
@@ -342,22 +366,20 @@
 <div class="absolute inset-0 hero-gradient"></div>
 </div>
 <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile sm:px-gutter w-full">
-<div class="max-w-2xl text-on-primary hero-content">
-<span class="inline-flex items-center gap-2 bg-secondary-fixed text-on-secondary-fixed px-3 py-1 sm:px-4 rounded-full text-xs sm:text-label-md font-label-md mb-4 sm:mb-6">
+<div class="hero-content hero-panel">
+<span class="inline-flex items-center gap-2 bg-secondary-fixed text-on-secondary-fixed px-3 py-1 sm:px-4 rounded-full text-xs sm:text-label-md font-label-md mb-4 sm:mb-5">
 <span class="material-symbols-outlined text-[16px] sm:text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
                         כשרות מהדרין
                     </span>
-<h1 class="font-headline-lg text-headline-lg-mobile sm:text-headline-md lg:text-headline-lg mb-2 sm:mb-4 leading-tight">
+<h1 class="font-headline-lg text-headline-lg-mobile sm:text-headline-md lg:text-headline-lg mb-3 sm:mb-4 leading-tight">
                         ברוכים הבאים למרוקו
                     </h1>
-<p class="font-label-md text-sm sm:text-base text-on-primary/85 mb-6 sm:mb-10 leading-relaxed tracking-wide">
+<p class="hero-subtitle font-label-md text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed">
                         חוויה אותנטית של ריחות, צבעים וטעמים, שמרימה את האירוע שלכם לרמה אחרת.
                     </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<a class="bg-secondary-fixed text-on-secondary-fixed px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl font-headline-sm text-center hover:scale-105 transition-transform shadow-lg border-b-4 border-on-secondary-fixed-variant break-words" href="#contact">
-                            בדקו זמינות לתאריך האירוע שלכם עכשיו
+<a class="block w-full sm:w-auto text-center bg-secondary-fixed text-on-secondary-fixed px-6 py-3.5 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl font-headline-sm hover:scale-[1.02] transition-transform shadow-md border-b-4 border-on-secondary-fixed-variant" href="#contact">
+                            בדקו זמינות לתאריך האירוע שלכם
                         </a>
-</div>
 </div>
 </div>
 </section>
