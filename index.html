@@ -68,6 +68,28 @@
             box-shadow: 0 20px 40px -10px rgba(17, 111, 107, 0.12);
         }
 
+        .experience-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .section-divider {
+            width: 4rem;
+            height: 3px;
+            background: linear-gradient(to left, var(--gold), var(--gold-dim));
+            margin-inline: auto;
+            border-radius: 9999px;
+        }
+
+        .experience-photo img {
+            transition: transform 0.6s ease;
+        }
+
+        .experience-photo:hover img {
+            transform: scale(1.02);
+        }
+
         .sticky-whatsapp {
             animation: pulse 2s infinite;
         }
@@ -282,53 +304,51 @@
 </div>
 </div>
 </section>
-<!-- Intro Section -->
-<section class="py-10 sm:py-14 bg-background text-center">
-<div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter">
-<h2 class="font-headline-md text-headline-md lg:text-headline-lg text-primary mb-3 sm:mb-4">הופכים כל אירוע לחגיגה מרוקאית בלתי נשכחת</h2>
-<p class="font-label-md text-sm sm:text-base text-on-surface-variant max-w-2xl mx-auto">עמדה אותנטית מרוקאית בהכנת מתוקים פרונטלית מול הקהל</p>
-</div>
-</section>
-<!-- Experience Cards Section -->
+<!-- Experience Section -->
 <section class="py-12 sm:py-16 lg:py-section-padding bg-surface-container-low">
 <div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter">
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-<article class="p-4 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-center sm:text-right">
+<div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+<div class="section-divider mb-6"></div>
+<h2 class="font-headline-md text-headline-md lg:text-headline-lg text-primary mb-3 sm:mb-4">הופכים כל אירוע לחגיגה מרוקאית בלתי נשכחת</h2>
+<p class="font-label-md text-sm sm:text-base text-on-surface-variant">עמדה אותנטית מרוקאית בהכנת מתוקים פרונטלית מול הקהל</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-8 sm:mb-12">
+<article class="experience-card p-5 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-right">
 <h3 class="font-headline-sm text-headline-sm mb-3 text-primary">החגיגה שמתחילה כאן</h3>
-<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">חם־חם, ספינג' ומופלטה.<br>אתם רואים, מריחים וטועמים –<br>ממש מול העיניים.</p>
+<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed flex-1">חם־חם, ספינג' ומופלטה. אתם רואים, מריחים וטועמים – ממש מול העיניים.</p>
 </article>
-<article class="p-4 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-center sm:text-right">
+<article class="experience-card p-5 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-right">
 <h3 class="font-headline-sm text-headline-sm mb-3 text-primary">שמחה שמדביקה</h3>
-<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">כל ביס מוכן במקום ומוגש באהבה ובאווירה של שמחה.<br>האורחים נמשכים לדוכן,<br>והאווירה עולה מעצמה.</p>
+<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed flex-1">כל ביס מוכן במקום ומוגש באהבה ובאווירה של שמחה. האורחים נמשכים לדוכן, והאווירה עולה מעצמה.</p>
 </article>
-</div>
-<div class="experience-photo my-6 sm:my-8 rounded-xl overflow-hidden aspect-[16/9] sm:aspect-[21/9] brand-shadow">
-<img src="/assets/images/hero/hero.jpg" alt="אווירה חגיגית סביב עמדת מתוקים מרוקאית באירוע" class="w-full h-full object-cover" loading="lazy" width="1024" height="768">
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-<article class="p-4 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-center sm:text-right">
+<article class="experience-card p-5 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-right">
 <h3 class="font-headline-sm text-headline-sm mb-3 text-primary">תפאורה שמרגישים</h3>
-<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">פנסים, נחושת וזהב מרוקאי<br>שמכניסים אתכם לעולם אחר.<br>כל פרט נבחר –<br>כדי שתרגישו חגיגה.</p>
+<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed flex-1">פנסים, נחושת וזהב מרוקאי שמכניסים אתכם לעולם אחר. כל פרט נבחר – כדי שתרגישו חגיגה.</p>
 </article>
-<article class="p-4 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-center sm:text-right">
+<article class="experience-card p-5 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-right">
 <h3 class="font-headline-sm text-headline-sm mb-3 text-primary">מגיעים, מקימים, חוגגים</h3>
-<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">אנחנו מגיעים עם הכל –<br>דוכן מעוצב, ציוד ואהבה.<br>אתם רק נהנים מהרגע.</p>
+<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed flex-1">אנחנו מגיעים עם הכל – דוכן מעוצב, ציוד ואהבה. אתם רק נהנים מהרגע.</p>
 </article>
 </div>
-<div class="experience-photo my-6 sm:my-8 rounded-xl overflow-hidden aspect-[16/9] sm:aspect-[21/9] brand-shadow">
-<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4QMEZuoGd5lU59iyYf2ptx53ZyTL5ar8PxjcDNZ7a8zIgg6KY497mGoSwWULAWdrICMaHPiyAdGH_eAHIQTCI1orRt97OSP6AR6kHrevbMOovyO0wVaJgI6rPv6bB9u1DYq66t7vGABnhvdYk5ecMlOk2BZ7YCtY4UocO1ohBCXEp-_FQjXPlIDb0xSD35-HkuJeBv2k-EMRxB61TGjcUTbTxGui6RMqtEMYxj7sxNrV-7_B-KThQoKDRK8HoEKUdgQM0cUbzGVRcRKA" alt="ספינג' ומופלטות מוזהבות על מגש מרוקאי מעוטר" class="w-full h-full object-cover" loading="lazy" width="800" height="600">
+<div class="experience-photo rounded-2xl overflow-hidden aspect-[16/9] sm:aspect-[2/1] brand-shadow">
+<img src="/assets/images/hero/hero.jpg" alt="עינת מגישה עמדת מתוקים מרוקאית מעוצבת באירוע חגיגי" class="w-full h-full object-cover object-[65%_center]" loading="lazy" width="1024" height="768">
 </div>
 </div>
 </section>
 <!-- Products Trio Section -->
-<section class="py-12 sm:py-16 bg-background">
+<section class="py-12 sm:py-16 lg:py-section-padding bg-background">
 <div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter">
+<div class="text-center mb-8 sm:mb-12">
+<div class="section-divider mb-6"></div>
+<h2 class="font-headline-md text-headline-md lg:text-headline-lg text-primary">הטעמים שמחכים לכם</h2>
+<p class="font-label-md text-sm sm:text-base text-on-surface-variant mt-3 max-w-xl mx-auto">שלושה מתוקים מסורתיים, חמים מהטיגון – ממש מול העיניים</p>
+</div>
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
 <article class="rounded-xl overflow-hidden brand-shadow bg-white">
 <div class="aspect-[4/3] overflow-hidden">
 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4QMEZuoGd5lU59iyYf2ptx53ZyTL5ar8PxjcDNZ7a8zIgg6KY497mGoSwWULAWdrICMaHPiyAdGH_eAHIQTCI1orRt97OSP6AR6kHrevbMOovyO0wVaJgI6rPv6bB9u1DYq66t7vGABnhvdYk5ecMlOk2BZ7YCtY4UocO1ohBCXEp-_FQjXPlIDb0xSD35-HkuJeBv2k-EMRxB61TGjcUTbTxGui6RMqtEMYxj7sxNrV-7_B-KThQoKDRK8HoEKUdgQM0cUbzGVRcRKA" alt="חם-חם מרוקאי טרי וקריספי" class="w-full h-full object-cover" loading="lazy" width="400" height="300">
 </div>
-<div class="p-4 sm:p-5 text-center sm:text-right">
+<div class="p-4 sm:p-5 text-right">
 <h3 class="font-headline-sm text-headline-sm text-primary mb-2">חם-חם</h3>
 <p class="text-on-surface-variant text-sm">קריספיים, חמים וטבולים בדבש – ביס קטן של שמחה.</p>
 </div>
@@ -337,7 +357,7 @@
 <div class="aspect-[4/3] overflow-hidden">
 <img src="/assets/images/hero/hero-mobile.jpg" alt="ספינג' מרוקאי חם מהטיגון" class="w-full h-full object-cover" loading="lazy" width="768" height="1024">
 </div>
-<div class="p-4 sm:p-5 text-center sm:text-right">
+<div class="p-4 sm:p-5 text-right">
 <h3 class="font-headline-sm text-headline-sm text-primary mb-2">ספינג'</h3>
 <p class="text-on-surface-variant text-sm">מוזהב, רך מבפנים – נהנים מהריח עוד לפני הביס הראשון.</p>
 </div>
@@ -346,7 +366,7 @@
 <div class="aspect-[4/3] overflow-hidden">
 <img src="/assets/images/hero/hero.jpg" alt="מופלטה דקה וטעימה עם חמאה ודבש" class="w-full h-full object-cover object-[65%_center]" loading="lazy" width="1024" height="768">
 </div>
-<div class="p-4 sm:p-5 text-center sm:text-right">
+<div class="p-4 sm:p-5 text-right">
 <h3 class="font-headline-sm text-headline-sm text-primary mb-2">מופלטה</h3>
 <p class="text-on-surface-variant text-sm">דקה, חמה ומוגשת עם חמאה ודבש – טעם של בית.</p>
 </div>
