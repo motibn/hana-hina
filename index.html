@@ -51,7 +51,7 @@
         }
 
         .ornate-border {
-            border-top: 3px solid var(--gold);
+            border-top: 3px solid var(--brand-gold);
             position: relative;
         }
 
@@ -63,8 +63,48 @@
             transform: translateX(-50%);
             background: #fcf9f2;
             padding: 0 10px;
-            color: var(--gold);
+            color: var(--brand-gold);
             font-size: 20px;
+        }
+
+        .section-gold-bg {
+            background: linear-gradient(
+                180deg,
+                rgba(247, 200, 105, 0.14) 0%,
+                rgba(247, 200, 105, 0.05) 28%,
+                #f6f3ec 55%
+            );
+        }
+
+        .section-gold-light {
+            background: linear-gradient(180deg, rgba(247, 200, 105, 0.09) 0%, #fcf9f2 30%);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 48rem;
+            margin-inline: auto;
+        }
+
+        .section-subtitle {
+            color: rgba(28, 28, 24, 0.75);
+        }
+
+        .brand-card {
+            background: rgba(255, 255, 255, 0.92);
+            border-top: 4px solid var(--brand-gold);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .brand-card h3,
+        .product-card h3 {
+            color: var(--brand-green);
+        }
+
+        .brand-card:hover {
+            transform: translateY(-3px);
+            border-top-color: var(--brand-gold-dim);
+            box-shadow: 0 20px 40px -10px rgba(247, 200, 105, 0.22);
         }
 
         .brand-shadow {
@@ -97,7 +137,18 @@
             border-radius: 9999px;
         }
 
-        .experience-section {
+        .experience-section .text-center {
+            text-align: center;
+            max-width: 48rem;
+            margin-inline: auto;
+        }
+
+        .experience-photo {
+            border-color: var(--brand-gold);
+        }
+
+        .experience-section,
+        .section-gold-bg {
             background: linear-gradient(
                 180deg,
                 rgba(247, 200, 105, 0.14) 0%,
@@ -140,18 +191,42 @@
         }
 
         .package-badge {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dim) 100%);
+            background: linear-gradient(135deg, var(--brand-green) 0%, #0D5653 100%);
             box-shadow: 0 8px 24px -4px rgba(17, 111, 107, 0.45);
         }
 
+        .package-content h3 {
+            color: var(--brand-green);
+        }
+
         .feature-pill {
-            background: rgba(255, 255, 255, 0.07);
-            border: 1px solid rgba(17, 111, 107, 0.25);
+            background: rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(17, 111, 107, 0.2);
             backdrop-filter: blur(4px);
         }
 
         .cta-glow:hover {
             box-shadow: 0 8px 32px rgba(17, 111, 107, 0.5);
+        }
+
+        .accordion-item {
+            border-bottom-color: rgba(247, 200, 105, 0.35);
+        }
+
+        .accordion-item h3 {
+            color: var(--brand-green);
+        }
+
+        .accordion-item .icon-rotate {
+            color: var(--brand-gold);
+        }
+
+        .contact-card {
+            border-top: 4px solid var(--brand-gold);
+        }
+
+        .story-image-frame {
+            border-color: var(--brand-gold);
         }
 
         .sticky-whatsapp {
@@ -332,7 +407,7 @@
 </head>
 <body class="bg-background text-on-surface font-body-md moroccan-pattern antialiased overflow-x-hidden">
 <!-- TopNavBar -->
-<header class="bg-background/90 backdrop-blur-md border-b border-secondary-fixed/30 sticky top-0 z-50 transition-all duration-200 py-stack-sm">
+<header class="bg-background/90 backdrop-blur-md border-b border-primary/25 sticky top-0 z-50 transition-all duration-200 py-stack-sm">
 <nav class="flex justify-between items-center px-margin-mobile sm:px-gutter py-stack-sm max-w-container-max mx-auto w-full gap-3" aria-label="ניווט ראשי">
 <div class="h-12 sm:h-16 w-auto flex items-center shrink-0"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqwejNdkiRQw-aM2KNdBKv5cO_I6dbgdixryyQGiS1hKcAVUKI_IMqnPFdZYbIMKolCUTx5Lbeff6o-X1hum6HsAJowPMUV0UaYJ8VivDoAY2GMfQgKnLJ7jPU2Ia5fKFEh_Wts-zMfHqIWovsR7_AZ8-CJrNaX1I1uXlQNUYbcZpbAEGLbdQiEwiLf8gD6_YXk64pr6qCRNd35G47y2pcmj--f-1ZxPFblUc0-bkHVMgCP9tHbcIGZh0c1G2dsrWZwfCADeGqQPIL" alt="חנה חינה" class="h-full w-auto object-contain"></div>
 <div class="hidden md:flex gap-8 items-center">
@@ -427,65 +502,65 @@
 <p class="text-on-surface/80 text-sm sm:text-base leading-relaxed flex-1">אנחנו מגיעים עם הכל – דוכן מעוצב, ציוד ואהבה. אתם רק נהנים מהרגע.</p>
 </article>
 </div>
-<div class="experience-photo rounded-2xl overflow-hidden aspect-[16/9] sm:aspect-[2/1] brand-shadow">
+<div class="experience-photo story-image-frame rounded-2xl overflow-hidden aspect-[16/9] sm:aspect-[2/1] brand-shadow border-4">
 <img src="/assets/images/hero/hero.jpg" alt="עינת מגישה עמדת מתוקים מרוקאית מעוצבת באירוע חגיגי" class="w-full h-full object-cover object-[65%_center]" loading="lazy" width="1024" height="768">
 </div>
 </div>
 </section>
 <!-- Products Trio Section -->
-<section class="py-12 sm:py-16 lg:py-section-padding bg-background">
+<section class="section-gold-light py-12 sm:py-16 lg:py-section-padding">
 <div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter">
-<div class="text-center mb-8 sm:mb-12">
+<div class="section-header mb-8 sm:mb-12">
 <div class="section-divider mb-6"></div>
-<h2 class="font-headline-md text-headline-md lg:text-headline-lg text-secondary-fixed">הטעמים שמחכים לכם</h2>
-<p class="font-label-md text-sm sm:text-base text-on-surface-variant mt-3 max-w-xl mx-auto">שלושה מתוקים מסורתיים, חמים מהטיגון – ממש מול העיניים</p>
+<h2 class="font-headline-md text-headline-md lg:text-headline-lg leading-tight"><span class="text-primary">הטעמים</span> <span class="text-secondary-fixed">שמחכים לכם</span></h2>
+<p class="section-subtitle font-label-md text-sm sm:text-base mt-3 max-w-xl mx-auto">שלושה מתוקים מסורתיים, חמים מהטיגון – ממש מול העיניים</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-<article class="product-card rounded-xl overflow-hidden brand-shadow bg-white group">
+<article class="product-card brand-card rounded-xl overflow-hidden brand-shadow group">
 <div class="aspect-[4/3] overflow-hidden relative">
 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4QMEZuoGd5lU59iyYf2ptx53ZyTL5ar8PxjcDNZ7a8zIgg6KY497mGoSwWULAWdrICMaHPiyAdGH_eAHIQTCI1orRt97OSP6AR6kHrevbMOovyO0wVaJgI6rPv6bB9u1DYq66t7vGABnhvdYk5ecMlOk2BZ7YCtY4UocO1ohBCXEp-_FQjXPlIDb0xSD35-HkuJeBv2k-EMRxB61TGjcUTbTxGui6RMqtEMYxj7sxNrV-7_B-KThQoKDRK8HoEKUdgQM0cUbzGVRcRKA" alt="חם-חם מרוקאי טרי וקריספי" class="w-full h-full object-cover" loading="lazy" width="400" height="300">
-<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 </div>
-<div class="p-4 sm:p-5 text-right border-t-4 border-secondary-fixed">
-<h3 class="font-headline-sm text-headline-sm text-secondary-fixed mb-2">חם-חם</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">קריספיים, חמים וטבולים בדבש – ביס קטן של שמחה.</p>
+<div class="p-4 sm:p-5 text-right border-t-0">
+<h3 class="font-headline-sm text-headline-sm mb-2">חם-חם</h3>
+<p class="text-on-surface/80 text-sm leading-relaxed">קריספיים, חמים וטבולים בדבש – ביס קטן של שמחה.</p>
 </div>
 </article>
-<article class="product-card rounded-xl overflow-hidden brand-shadow bg-white group">
+<article class="product-card brand-card rounded-xl overflow-hidden brand-shadow group">
 <div class="aspect-[4/3] overflow-hidden relative">
 <img src="/assets/images/hero/hero-mobile.jpg" alt="ספינג' מרוקאי חם מהטיגון" class="w-full h-full object-cover" loading="lazy" width="768" height="1024">
-<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 </div>
-<div class="p-4 sm:p-5 text-right border-t-4 border-secondary-fixed">
-<h3 class="font-headline-sm text-headline-sm text-secondary-fixed mb-2">ספינג'</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">מוזהב, רך מבפנים – נהנים מהריח עוד לפני הביס הראשון.</p>
+<div class="p-4 sm:p-5 text-right border-t-0">
+<h3 class="font-headline-sm text-headline-sm mb-2">ספינג'</h3>
+<p class="text-on-surface/80 text-sm leading-relaxed">מוזהב, רך מבפנים – נהנים מהריח עוד לפני הביס הראשון.</p>
 </div>
 </article>
-<article class="product-card rounded-xl overflow-hidden brand-shadow bg-white group">
+<article class="product-card brand-card rounded-xl overflow-hidden brand-shadow group">
 <div class="aspect-[4/3] overflow-hidden relative">
 <img src="/assets/images/hero/hero.jpg" alt="מופלטה דקה וטעימה עם חמאה ודבש" class="w-full h-full object-cover object-[65%_center]" loading="lazy" width="1024" height="768">
-<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 </div>
-<div class="p-4 sm:p-5 text-right border-t-4 border-secondary-fixed">
-<h3 class="font-headline-sm text-headline-sm text-secondary-fixed mb-2">מופלטה</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">דקה, חמה ומוגשת עם חמאה ודבש – טעם של בית.</p>
+<div class="p-4 sm:p-5 text-right border-t-0">
+<h3 class="font-headline-sm text-headline-sm mb-2">מופלטה</h3>
+<p class="text-on-surface/80 text-sm leading-relaxed">דקה, חמה ומוגשת עם חמאה ודבש – טעם של בית.</p>
 </div>
 </article>
 </div>
 </div>
 </section>
 <!-- Package Section -->
-<section class="py-12 sm:py-16 lg:py-section-padding bg-surface-container-low" id="packages">
+<section class="section-gold-bg py-12 sm:py-16 lg:py-section-padding" id="packages">
 <div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter">
-<div class="text-center mb-8 sm:mb-12">
+<div class="section-header mb-8 sm:mb-12">
 <div class="section-divider mb-6"></div>
-<h2 class="font-headline-md text-headline-md lg:text-headline-lg text-secondary-fixed">החבילה שלנו</h2>
-<p class="font-label-md text-sm sm:text-base text-on-surface-variant mt-3 max-w-xl mx-auto">כל מה שצריך לחגיגה מרוקאית מושלמת – במקום אחד</p>
+<h2 class="font-headline-md text-headline-md lg:text-headline-lg leading-tight"><span class="text-primary">החבילה</span> <span class="text-secondary-fixed">שלנו</span></h2>
+<p class="section-subtitle font-label-md text-sm sm:text-base mt-3 max-w-xl mx-auto">כל מה שצריך לחגיגה מרוקאית מושלמת – במקום אחד</p>
 </div>
 <div class="package-card rounded-2xl sm:rounded-[2rem] overflow-hidden flex flex-col lg:flex-row">
 <div class="lg:w-2/5 relative min-h-[260px] sm:min-h-[320px] lg:min-h-0">
 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4QMEZuoGd5lU59iyYf2ptx53ZyTL5ar8PxjcDNZ7a8zIgg6KY497mGoSwWULAWdrICMaHPiyAdGH_eAHIQTCI1orRt97OSP6AR6kHrevbMOovyO0wVaJgI6rPv6bB9u1DYq66t7vGABnhvdYk5ecMlOk2BZ7YCtY4UocO1ohBCXEp-_FQjXPlIDb0xSD35-HkuJeBv2k-EMRxB61TGjcUTbTxGui6RMqtEMYxj7sxNrV-7_B-KThQoKDRK8HoEKUdgQM0cUbzGVRcRKA" alt="ספינג' ומופלטות מוזהבות על מגש מרוקאי מעוטר" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="800" height="600">
-<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent lg:bg-gradient-to-l lg:from-primary lg:via-primary/30 lg:to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent lg:bg-gradient-to-l lg:from-black/40 lg:via-black/10 lg:to-transparent"></div>
 <div class="absolute bottom-4 right-4 sm:bottom-6 sm:right-6">
 <span class="inline-flex items-center gap-1.5 bg-white/95 text-secondary-fixed px-3 py-1.5 rounded-full text-xs sm:text-sm font-label-md shadow-md">
 <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
@@ -498,7 +573,7 @@
 <div class="relative z-10 p-6 sm:p-10 lg:p-14 flex flex-col h-full">
 <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6 sm:mb-8">
 <div>
-<span class="inline-block text-secondary-fixed/90 font-label-md text-xs sm:text-sm tracking-widest mb-2">החבילה המלאה</span>
+<span class="inline-block text-secondary-fixed font-label-md text-xs sm:text-sm tracking-widest mb-2">החבילה המלאה</span>
 <h3 class="font-headline-lg text-headline-md lg:text-headline-lg leading-tight">חוויה מרוקאית מלאה</h3>
 </div>
 <div class="package-badge inline-flex items-baseline gap-1 self-start sm:self-auto px-5 py-3 rounded-2xl">
@@ -536,52 +611,54 @@
 </div>
 </section>
 <!-- Story Section -->
-<section class="py-12 sm:py-16 lg:py-section-padding bg-background relative overflow-hidden" id="story">
+<section class="section-gold-light py-12 sm:py-16 lg:py-section-padding relative overflow-hidden" id="story">
 <div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-center">
 <div class="lg:w-1/2 w-full">
 <div class="relative">
-<div class="rounded-2xl overflow-hidden brand-shadow border-4 sm:border-8 border-white">
+<div class="story-image-frame rounded-2xl overflow-hidden brand-shadow border-4 sm:border-8">
 <img class="w-full aspect-square object-cover" alt="עינת, מייסדת חנה חינה, ליד תמונה של סבתא חנה במטבח מרוקאי מסורתי" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjBDPLe0ak7bAI8mECSIpc-HAaUIdsBcW8-CMDDZSRJ_MXuf_z-FLRPz_B0cjcnT3oxwBs6Mfseb6DO2Tqu0X9R1mjvzITI8JPfpyYU80bO9NvcDNNgzndwg7IfjIBWIN0UyvGZS_hdDUKBR0TZQBehgeerOEBnFN03WsdxEfALdca7oFWMqtTWxVVKgK3Jmrxk_cZsl-J_DXcqLeoLGpOtC6brDrItyynKlgWRDpxzIVqJXdicTqPa0JUt5uvaFHexuFlyLQT93_zbhs" loading="lazy" width="600" height="600">
 </div>
 </div>
 </div>
 <div class="lg:w-1/2">
-<div class="ornate-border mb-6 sm:mb-10 pt-8 inline-block">
-<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-secondary-fixed">לפני שהייתה חנה חינה, הייתה סבתא חנה</h2>
-</div>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
+<div class="section-divider mb-6 sm:mb-8 ms-0"></div>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg mb-6 sm:mb-8 leading-tight"><span class="text-primary">לפני שהייתה חנה חינה,</span> <span class="text-secondary-fixed">הייתה סבתא חנה</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface/80 leading-relaxed mb-6">
                         כל חגיגה התחילה אצלה במטבח, עם בצק שתפח לאט, מופלטה דקה וטעימה שהוגשה עם חמאה ודבש, ספינג' חם שהוכן באהבה, וחם־חם קטנטנים, קריספיים וטבולים בדבש.
                     </p>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
+<p class="font-body-lg text-body-lg text-on-surface/80 leading-relaxed mb-6">
                         ואירוח שלא היה צריך הזמנה מיוחדת.
                     </p>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
+<p class="font-body-lg text-body-lg text-on-surface/80 leading-relaxed mb-6">
                         גדלתי על הרגעים האלה, והם נשארו איתי.
                     </p>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-10">
+<p class="font-body-lg text-body-lg text-on-surface/80 leading-relaxed mb-10">
                         היום אני לוקחת את אותם הטעמים, את אותה המסורת ואת אותה האהבה לאירוח, ומביאה אותם אל האירוע שלכם – כדי שגם אתם והאורחים שלכם תוכלו להרגיש את הקסם שגדלתי עליו. עינת מגיעה עם סינר כחלק מהשפה והנראות של המותג – אותנטית, חמה ומזמינה.
                     </p>
 <div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full border-2 border-secondary-fixed overflow-hidden">
+<div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
 <img class="w-full h-full object-cover" alt="עינת, מייסדת חנה חינה" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzGWjmckGm8d_5SgSowW8tPrwApzX1jbRS5sQsXy5NXptNX0QOo8s90HieuXEeWc2nJCp7AYHHLAhKB8noJL40bIiTQgCUmWqGsPWajY9B0ERg6pAuOBnHpigHECLoQUI_YHCwufBDVXifhmt_f0gqEeDpIilCUeA15Us8zXjXHltic-7ziQJWf6aPOpWuSQeJI4PUQpInR34Vnyt5mojP4lEJYzB51Isr6zdvOc3m6fNT0qHofLoWxRMlo7H7BCYOKUAiYM_FFKXZ" loading="lazy" width="48" height="48">
 </div>
 <div>
 <p class="font-bold text-secondary-fixed">עינת, מייסדת חנה חינה</p>
-<p class="text-on-surface-variant text-sm">ממשיכת השושלת והמסורת</p>
+<p class="text-on-surface/70 text-sm">ממשיכת השושלת והמסורת</p>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- Testimonials Section -->
-<section class="py-12 sm:py-16 lg:py-section-padding bg-surface-container" id="testimonials">
+<section class="section-gold-bg py-12 sm:py-16 lg:py-section-padding" id="testimonials">
 <div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter text-center">
-<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-secondary-fixed mb-8 sm:mb-16">מה הלקוחות שלנו אומרים?</h2>
+<div class="section-header mb-8 sm:mb-12">
+<div class="section-divider mb-6"></div>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg leading-tight"><span class="text-primary">מה הלקוחות</span> <span class="text-secondary-fixed">שלנו אומרים?</span></h2>
+</div>
 <div class="max-w-2xl mx-auto">
 <!-- אישור לקוח לפרסום -->
-<div class="bg-white p-6 sm:p-8 rounded-2xl brand-shadow text-right relative">
-<span class="material-symbols-outlined text-secondary-fixed absolute top-4 left-4 text-4xl opacity-50">format_quote</span>
-<div class="flex gap-1 text-secondary mb-4">
+<div class="brand-card p-6 sm:p-8 rounded-2xl brand-shadow text-right relative">
+<span class="material-symbols-outlined text-primary absolute top-4 left-4 text-4xl opacity-50">format_quote</span>
+<div class="flex gap-1 text-primary mb-4">
 <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
 <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
 <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
@@ -598,44 +675,47 @@
 </div>
 </section>
 <!-- FAQ Section -->
-<section class="py-12 sm:py-16 lg:py-section-padding" id="faq">
+<section class="section-gold-light py-12 sm:py-16 lg:py-section-padding" id="faq">
 <div class="max-w-3xl mx-auto px-margin-mobile sm:px-gutter">
-<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-secondary-fixed text-center mb-8 sm:mb-16">שאלות נפוצות</h2>
+<div class="section-header mb-8 sm:mb-12">
+<div class="section-divider mb-6"></div>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg leading-tight"><span class="text-primary">שאלות</span> <span class="text-secondary-fixed">נפוצות</span></h2>
+</div>
 <div class="space-y-4">
-<div class="accordion-item border-b border-surface-variant pb-4 cursor-pointer" role="button" tabindex="0" aria-expanded="false">
+<div class="accordion-item pb-4 cursor-pointer" role="button" tabindex="0" aria-expanded="false">
 <div class="flex justify-between items-center py-4 accordion-trigger">
 <h3 class="font-headline-sm text-headline-sm">מה לגבי כשרות?</h3>
 <span class="material-symbols-outlined icon-rotate transition-transform" aria-hidden="true">expand_more</span>
 </div>
 <div class="accordion-content" role="region">
-<p class="text-on-surface-variant">העמדה שלנו כשרה למהדרין. אנחנו מקפידים על כל הכללים ומשתמשים בחומרי גלם איכותיים בלבד כדי שכולם יוכלו ליהנות בראש שקט.</p>
+<p class="text-on-surface/80">העמדה שלנו כשרה למהדרין. אנחנו מקפידים על כל הכללים ומשתמשים בחומרי גלם איכותיים בלבד כדי שכולם יוכלו ליהנות בראש שקט.</p>
 </div>
 </div>
-<div class="accordion-item border-b border-surface-variant pb-4 cursor-pointer" role="button" tabindex="0" aria-expanded="false">
+<div class="accordion-item pb-4 cursor-pointer" role="button" tabindex="0" aria-expanded="false">
 <div class="flex justify-between items-center py-4 accordion-trigger">
 <h3 class="font-headline-sm text-headline-sm">מה קורה אם יש יותר מ-150 אורחים?</h3>
 <span class="material-symbols-outlined icon-rotate transition-transform" aria-hidden="true">expand_more</span>
 </div>
 <div class="accordion-content" role="region">
-<p class="text-on-surface-variant">אין שום בעיה! אנחנו ערוכים לאירועים בכל סדר גודל. ניתן לשדרג את החבילה בתוספת תשלום מותאמת לכמות האורחים שלכם.</p>
+<p class="text-on-surface/80">אין שום בעיה! אנחנו ערוכים לאירועים בכל סדר גודל. ניתן לשדרג את החבילה בתוספת תשלום מותאמת לכמות האורחים שלכם.</p>
 </div>
 </div>
-<div class="accordion-item border-b border-surface-variant pb-4 cursor-pointer" role="button" tabindex="0" aria-expanded="false">
+<div class="accordion-item pb-4 cursor-pointer" role="button" tabindex="0" aria-expanded="false">
 <div class="flex justify-between items-center py-4 accordion-trigger">
 <h3 class="font-headline-sm text-headline-sm">איך משריינים תאריך?</h3>
 <span class="material-symbols-outlined icon-rotate transition-transform" aria-hidden="true">expand_more</span>
 </div>
 <div class="accordion-content" role="region">
-<p class="text-on-surface-variant">משאירים פרטים בטופס למטה, אנחנו חוזרים אליכם לוודא זמינות, ולאחר תשלום מקדמה קטן התאריך שלכם משוריין אצלנו.</p>
+<p class="text-on-surface/80">משאירים פרטים בטופס למטה, אנחנו חוזרים אליכם לוודא זמינות, ולאחר תשלום מקדמה קטן התאריך שלכם משוריין אצלנו.</p>
 </div>
 </div>
-<div class="accordion-item border-b border-surface-variant pb-4 cursor-pointer" role="button" tabindex="0" aria-expanded="false">
+<div class="accordion-item pb-4 cursor-pointer" role="button" tabindex="0" aria-expanded="false">
 <div class="flex justify-between items-center py-4 accordion-trigger">
 <h3 class="font-headline-sm text-headline-sm">מה המדיניות לגבי ביטולי ביטחון?</h3>
 <span class="material-symbols-outlined icon-rotate transition-transform" aria-hidden="true">expand_more</span>
 </div>
 <div class="accordion-content" role="region">
-<p class="text-on-surface-variant">אנחנו מבינים את המציאות בישראל. במקרה של ביטול עקב הוראות פיקוד העורף או מצב ביטחוני, ניתן לדחות את האירוע למועד אחר ללא קנס או לקבל את המקדמה בחזרה בהתאם לחוזה.</p>
+<p class="text-on-surface/80">אנחנו מבינים את המציאות בישראל. במקרה של ביטול עקב הוראות פיקוד העורף או מצב ביטחוני, ניתן לדחות את האירוע למועד אחר ללא קנס או לקבל את המקדמה בחזרה בהתאם לחוזה.</p>
 </div>
 </div>
 </div>
@@ -645,20 +725,22 @@
 <section class="py-12 sm:py-16 lg:py-section-padding bg-primary relative" id="contact">
 <div class="absolute inset-0 opacity-10 pointer-events-none moroccan-pattern"></div>
 <div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter relative z-10">
-<div class="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-16 shadow-2xl flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+<div class="contact-card bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-16 shadow-2xl flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
 <div class="lg:w-1/2 w-full">
-<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-secondary-fixed mb-4 sm:mb-6">מוכנים להרים את האירוע שלכם? השאירו פרטים ונדבר!</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+<div class="section-divider mb-6 ms-0"></div>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg mb-4 sm:mb-6 leading-tight"><span class="text-primary">מוכנים להרים</span> <span class="text-secondary-fixed">את האירוע שלכם?</span></h2>
+<p class="font-label-md text-sm sm:text-base text-on-surface/70 mb-4">השאירו פרטים ונדבר!</p>
+<p class="font-body-lg text-body-lg text-on-surface/80 mb-10">
                             מלאו את הפרטים ועינת תחזור אליכם עם כל המידע, הזמינות והצעת מחיר שאי אפשר לסרב לה.
                         </p>
 <div class="flex flex-col gap-6">
 <div class="flex items-center gap-4 text-secondary-fixed">
 <span class="material-symbols-outlined text-3xl" aria-hidden="true">call</span>
-<a href="https://wa.me/972509422462" class="font-headline-sm hover:text-secondary transition-colors" target="_blank" rel="noopener noreferrer">050-942-2462</a>
+<a href="https://wa.me/972509422462" class="font-headline-sm hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">050-942-2462</a>
 </div>
 <div class="flex items-center gap-4 text-secondary-fixed">
 <span class="material-symbols-outlined text-3xl" aria-hidden="true">mail</span>
-<a href="mailto:office@hana-henna.co.il" class="font-headline-sm hover:text-secondary transition-colors">office@hana-henna.co.il</a>
+<a href="mailto:office@hana-henna.co.il" class="font-headline-sm hover:text-primary transition-colors">office@hana-henna.co.il</a>
 </div>
 </div>
 </div>
@@ -691,7 +773,7 @@
 </select>
 </div>
 </div>
-<button class="w-full bg-secondary text-on-secondary py-5 rounded-xl font-headline-sm hover:scale-[1.02] transition-transform shadow-lg border-b-4 border-on-secondary-fixed-variant" type="submit">
+<button class="w-full bg-secondary-fixed text-on-secondary-fixed py-5 rounded-xl font-headline-sm hover:scale-[1.02] transition-transform shadow-lg border-b-4 border-on-secondary-fixed-variant" type="submit">
                                 דברי איתי עינת!
                             </button>
 </form>
