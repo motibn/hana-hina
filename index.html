@@ -40,6 +40,9 @@
             --emerald: #F7C869;
             --gold: #116F6B;
             --gold-dim: #0D5653;
+            --brand-gold: #F7C869;
+            --brand-gold-dim: #F2CA79;
+            --brand-green: #116F6B;
         }
 
         .moroccan-pattern {
@@ -72,20 +75,35 @@
             display: flex;
             flex-direction: column;
             height: 100%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border-top-color: var(--brand-gold);
+        }
+
+        .experience-card h3 {
+            color: var(--brand-green);
         }
 
         .experience-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 20px 40px -10px rgba(247, 200, 105, 0.18);
+            border-top-color: var(--brand-gold-dim);
+            box-shadow: 0 20px 40px -10px rgba(247, 200, 105, 0.22);
         }
 
         .section-divider {
-            width: 4rem;
-            height: 3px;
-            background: linear-gradient(to left, var(--gold), var(--gold-dim));
+            width: 5rem;
+            height: 4px;
+            background: linear-gradient(to left, var(--brand-gold), var(--brand-gold-dim));
             margin-inline: auto;
             border-radius: 9999px;
+        }
+
+        .experience-section {
+            background: linear-gradient(
+                180deg,
+                rgba(247, 200, 105, 0.14) 0%,
+                rgba(247, 200, 105, 0.05) 28%,
+                #f6f3ec 55%
+            );
         }
 
         .experience-photo img {
@@ -384,29 +402,29 @@
 </div>
 </section>
 <!-- Experience Section -->
-<section class="py-12 sm:py-16 lg:py-section-padding bg-surface-container-low">
+<section class="experience-section py-12 sm:py-16 lg:py-section-padding">
 <div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter">
 <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
 <div class="section-divider mb-6"></div>
-<h2 class="font-headline-md text-headline-md lg:text-headline-lg text-secondary-fixed mb-3 sm:mb-4">הופכים כל אירוע לחגיגה מרוקאית בלתי נשכחת</h2>
-<p class="font-label-md text-sm sm:text-base text-on-surface-variant">עמדה אותנטית מרוקאית בהכנת מתוקים פרונטלית מול הקהל</p>
+<h2 class="font-headline-md text-headline-md lg:text-headline-lg mb-3 sm:mb-4 leading-tight"><span class="text-primary">הופכים כל אירוע</span> <span class="text-secondary-fixed">לחגיגה מרוקאית בלתי נשכחת</span></h2>
+<p class="font-label-md text-sm sm:text-base text-on-surface/75 max-w-2xl mx-auto">עמדה אותנטית מרוקאית בהכנת מתוקים פרונטלית מול הקהל</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-8 sm:mb-12">
-<article class="experience-card p-5 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-right">
-<h3 class="font-headline-sm text-headline-sm mb-3 text-secondary-fixed">החגיגה שמתחילה כאן</h3>
-<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed flex-1">חם־חם, ספינג' ומופלטה. אתם רואים, מריחים וטועמים – ממש מול העיניים.</p>
+<article class="experience-card p-5 sm:p-6 bg-white/90 rounded-xl brand-shadow border-t-4 border-primary text-right">
+<h3 class="font-headline-sm text-headline-sm mb-3">החגיגה שמתחילה כאן</h3>
+<p class="text-on-surface/80 text-sm sm:text-base leading-relaxed flex-1">חם־חם, ספינג' ומופלטה. אתם רואים, מריחים וטועמים – ממש מול העיניים.</p>
 </article>
-<article class="experience-card p-5 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-right">
-<h3 class="font-headline-sm text-headline-sm mb-3 text-secondary-fixed">שמחה שמדביקה</h3>
-<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed flex-1">כל ביס מוכן במקום ומוגש באהבה ובאווירה של שמחה. האורחים נמשכים לדוכן, והאווירה עולה מעצמה.</p>
+<article class="experience-card p-5 sm:p-6 bg-white/90 rounded-xl brand-shadow border-t-4 border-primary text-right">
+<h3 class="font-headline-sm text-headline-sm mb-3">שמחה שמדביקה</h3>
+<p class="text-on-surface/80 text-sm sm:text-base leading-relaxed flex-1">כל ביס מוכן במקום ומוגש באהבה ובאווירה של שמחה. האורחים נמשכים לדוכן, והאווירה עולה מעצמה.</p>
 </article>
-<article class="experience-card p-5 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-right">
-<h3 class="font-headline-sm text-headline-sm mb-3 text-secondary-fixed">תפאורה שמרגישים</h3>
-<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed flex-1">פנסים, נחושת וזהב מרוקאי שמכניסים אתכם לעולם אחר. כל פרט נבחר – כדי שתרגישו חגיגה.</p>
+<article class="experience-card p-5 sm:p-6 bg-white/90 rounded-xl brand-shadow border-t-4 border-primary text-right">
+<h3 class="font-headline-sm text-headline-sm mb-3">תפאורה שמרגישים</h3>
+<p class="text-on-surface/80 text-sm sm:text-base leading-relaxed flex-1">פנסים, נחושת וזהב מרוקאי שמכניסים אתכם לעולם אחר. כל פרט נבחר – כדי שתרגישו חגיגה.</p>
 </article>
-<article class="experience-card p-5 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-right">
-<h3 class="font-headline-sm text-headline-sm mb-3 text-secondary-fixed">מגיעים, מקימים, חוגגים</h3>
-<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed flex-1">אנחנו מגיעים עם הכל – דוכן מעוצב, ציוד ואהבה. אתם רק נהנים מהרגע.</p>
+<article class="experience-card p-5 sm:p-6 bg-white/90 rounded-xl brand-shadow border-t-4 border-primary text-right">
+<h3 class="font-headline-sm text-headline-sm mb-3">מגיעים, מקימים, חוגגים</h3>
+<p class="text-on-surface/80 text-sm sm:text-base leading-relaxed flex-1">אנחנו מגיעים עם הכל – דוכן מעוצב, ציוד ואהבה. אתם רק נהנים מהרגע.</p>
 </article>
 </div>
 <div class="experience-photo rounded-2xl overflow-hidden aspect-[16/9] sm:aspect-[2/1] brand-shadow">
