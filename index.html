@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>חנה חינה | הופכים כל אירוע לחגיגה מרוקאית בלתי נשכחת</title>
-<meta name="description" content="עמדה אותנטית מרוקאית בהכנת מתוקים פרונטלית מול הקהל – ספינג' ומופלטות לאירועים. כשרות מהדרין. בדקו זמינות!">
+<title>חנה חינה | ברוכים הבאים למרוקו – חגיגה מרוקאית בלתי נשכחת</title>
+<meta name="description" content="ברוכים הבאים למרוקו – חוויה אותנטית של ספינג', מופלטה וחם-חם בהכנה פרונטלית מול הקהל. כשרות מהדרין. בדקו זמינות!">
 <link rel="canonical" href="https://hana-henna.co.il/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="חנה חינה | הופכים כל אירוע לחגיגה מרוקאית בלתי נשכחת">
-<meta property="og:description" content="עמדה אותנטית מרוקאית בהכנת מתוקים פרונטלית מול הקהל – ספינג' ומופלטות לאירועים. כשרות מהדרין.">
+<meta property="og:title" content="חנה חינה | ברוכים הבאים למרוקו – חגיגה מרוקאית בלתי נשכחת">
+<meta property="og:description" content="חוויה אותנטית של ספינג', מופלטה וחם-חם בהכנה פרונטלית מול הקהל. כשרות מהדרין.">
 <meta property="og:image" content="https://hana-henna.co.il/assets/images/hero/hero.jpg">
 <link rel="preload" as="image" href="/assets/images/hero/hero-mobile.webp" type="image/webp" media="(max-width: 639px)">
 <link rel="preload" as="image" href="/assets/images/hero/hero.webp" type="image/webp" media="(min-width: 640px)">
@@ -20,7 +20,7 @@
   "@type": "FoodEstablishment",
   "name": "חנה חינה",
   "alternateName": "Hana Henna",
-  "description": "עמדת מתוקים מרוקאית בהכנה חיה – ספינג' ומופלטות לאירועים בכל הארץ. כשרות מהדרין.",
+  "description": "ברוכים הבאים למרוקו – חוויה אותנטית של ספינג', מופלטה וחם-חם בהכנה פרונטלית מול הקהל. כשרות מהדרין.",
   "url": "https://hana-henna.co.il/",
   "telephone": "+972-50-942-2462",
   "email": "office@hana-henna.co.il",
@@ -37,14 +37,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <style>
         :root {
-            --emerald: #003331;
-            --gold: #D4AF37;
-            --copper: #B87333;
+            --emerald: #116F6B;
+            --gold: #F7C869;
+            --gold-dim: #F2CA79;
         }
 
         .moroccan-pattern {
             background-color: #fcf9f2;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l5 15 15 5-15 5-5 15-5-15-15-5 15-5z' fill='%23d4af37' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l5 15 15 5-15 5-5 15-5-15-15-5 15-5z' fill='%23F7C869' fill-opacity='0.06' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
 
         .ornate-border {
@@ -64,8 +64,8 @@
             font-size: 20px;
         }
 
-        .copper-shadow {
-            box-shadow: 0 20px 40px -10px rgba(184, 115, 51, 0.15);
+        .brand-shadow {
+            box-shadow: 0 20px 40px -10px rgba(17, 111, 107, 0.12);
         }
 
         .sticky-whatsapp {
@@ -81,15 +81,21 @@
         .hero-gradient {
             background: linear-gradient(
                 to bottom left,
-                rgba(0,51,49,0.95) 0%,
-                rgba(0,51,49,0.75) 20%,
-                rgba(0,51,49,0.2) 45%,
-                rgba(0,51,49,0) 65%
+                rgba(17,111,107,0.95) 0%,
+                rgba(17,111,107,0.75) 20%,
+                rgba(17,111,107,0.2) 45%,
+                rgba(17,111,107,0) 65%
             );
         }
 
         .hero-img {
+            object-fit: cover;
             object-position: 48% 62%;
+        }
+
+        .hero-media {
+            min-height: 70svh;
+            max-height: 90svh;
         }
 
         .hero-content {
@@ -98,7 +104,7 @@
         }
 
         .hero-section {
-            min-height: 90svh;
+            min-height: auto;
             padding-top: 4.5rem;
             padding-bottom: 1rem;
             align-items: flex-start;
@@ -106,11 +112,16 @@
 
         @media (min-width: 640px) {
             .hero-gradient {
-                background: linear-gradient(rgba(0,51,49,0.8), rgba(0,51,49,0.6));
+                background: linear-gradient(rgba(17,111,107,0.8), rgba(17,111,107,0.6));
             }
 
             .hero-img {
                 object-position: 65% center;
+            }
+
+            .hero-media {
+                min-height: 75vh;
+                max-height: none;
             }
 
             .hero-content {
@@ -132,7 +143,7 @@
             }
 
             .hero-section {
-                min-height: 921px;
+                min-height: 85vh;
             }
         }
 
@@ -242,12 +253,12 @@
 <main class="pb-20 sm:pb-0">
 <!-- Hero Section -->
 <section class="hero-section relative flex overflow-hidden sm:py-16">
-<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 z-0 hero-media">
 <picture class="absolute inset-0 w-full h-full">
 <source media="(max-width: 639px)" srcset="/assets/images/hero/hero-mobile.webp" type="image/webp">
 <source media="(max-width: 639px)" srcset="/assets/images/hero/hero-mobile.jpg">
 <source srcset="/assets/images/hero/hero.webp" type="image/webp">
-<img src="/assets/images/hero/hero.jpg" alt="עינת, מייסדת חנה חינה, מגישה עמדת ספינג' ומופלטות מרוקאית באירוע חגיגי" class="w-full h-full object-cover hero-img" fetchpriority="high" decoding="async" width="1024" height="768">
+<img src="/assets/images/hero/hero.jpg" alt="ברוכים הבאים למרוקו – עינת מגישה ספינג', מופלטה וחם-חם באירוע חגיגי" class="w-full h-full object-cover hero-img" fetchpriority="high" decoding="async" width="1024" height="768">
 </picture>
 <div class="absolute inset-0 hero-gradient"></div>
 </div>
@@ -258,10 +269,10 @@
                         כשרות מהדרין
                     </span>
 <h1 class="font-headline-lg text-headline-lg-mobile sm:text-headline-md lg:text-headline-lg mb-2 sm:mb-4 leading-tight">
-                        הופכים כל אירוע לחגיגה מרוקאית בלתי נשכחת
+                        ברוכים הבאים למרוקו
                     </h1>
 <p class="font-label-md text-sm sm:text-base text-on-primary/85 mb-6 sm:mb-10 leading-relaxed tracking-wide">
-                        עמדה אותנטית מרוקאית בהכנת מתוקים פרונטלית מול הקהל
+                        חוויה אותנטית של ריחות, צבעים וטעמים, שמרימה את האירוע שלכם לרמה אחרת.
                     </p>
 <div class="flex flex-col sm:flex-row gap-4">
 <a class="bg-secondary-fixed text-on-secondary-fixed px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl font-headline-sm text-center hover:scale-105 transition-transform shadow-lg border-b-4 border-on-secondary-fixed-variant break-words" href="#contact">
@@ -271,80 +282,118 @@
 </div>
 </div>
 </section>
-<!-- Differentiation Section -->
+<!-- Intro Section -->
+<section class="py-10 sm:py-14 bg-background text-center">
+<div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter">
+<h2 class="font-headline-md text-headline-md lg:text-headline-lg text-primary mb-3 sm:mb-4">הופכים כל אירוע לחגיגה מרוקאית בלתי נשכחת</h2>
+<p class="font-label-md text-sm sm:text-base text-on-surface-variant max-w-2xl mx-auto">עמדה אותנטית מרוקאית בהכנת מתוקים פרונטלית מול הקהל</p>
+</div>
+</section>
+<!-- Experience Cards Section -->
 <section class="py-12 sm:py-16 lg:py-section-padding bg-surface-container-low">
-<div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter text-center">
-<div class="ornate-border mb-8 sm:mb-16 pt-8 max-w-lg mx-auto">
-<h2 class="font-headline-md text-headline-md lg:text-headline-lg text-primary">אצלנו לא מקבלים רק מגש לשולחן – מקבלים חגיגה</h2>
+<div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+<article class="p-4 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-center sm:text-right">
+<h3 class="font-headline-sm text-headline-sm mb-3 text-primary">החגיגה שמתחילה כאן</h3>
+<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">חם־חם, ספינג' ומופלטה.<br>אתם רואים, מריחים וטועמים –<br>ממש מול העיניים.</p>
+</article>
+<article class="p-4 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-center sm:text-right">
+<h3 class="font-headline-sm text-headline-sm mb-3 text-primary">שמחה שמדביקה</h3>
+<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">כל ביס מוכן במקום ומוגש באהבה ובאווירה של שמחה.<br>האורחים נמשכים לדוכן,<br>והאווירה עולה מעצמה.</p>
+</article>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-<div class="p-6 sm:p-8 bg-white rounded-xl copper-shadow border-t-4 border-secondary flex flex-col items-center">
-<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined text-[40px]">restaurant_menu</span>
+<div class="experience-photo my-6 sm:my-8 rounded-xl overflow-hidden aspect-[16/9] sm:aspect-[21/9] brand-shadow">
+<img src="/assets/images/hero/hero.jpg" alt="אווירה חגיגית סביב עמדת מתוקים מרוקאית באירוע" class="w-full h-full object-cover" loading="lazy" width="1024" height="768">
 </div>
-<h3 class="font-headline-sm text-headline-sm mb-4">הכנה חיה</h3>
-<p class="text-on-surface-variant">הקהל רואה את הקסם קורה מול העיניים - מופלטות חמות וספינג' טרי.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+<article class="p-4 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-center sm:text-right">
+<h3 class="font-headline-sm text-headline-sm mb-3 text-primary">תפאורה שמרגישים</h3>
+<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">פנסים, נחושת וזהב מרוקאי<br>שמכניסים אתכם לעולם אחר.<br>כל פרט נבחר –<br>כדי שתרגישו חגיגה.</p>
+</article>
+<article class="p-4 sm:p-6 bg-white rounded-xl brand-shadow border-t-4 border-secondary-fixed text-center sm:text-right">
+<h3 class="font-headline-sm text-headline-sm mb-3 text-primary">מגיעים, מקימים, חוגגים</h3>
+<p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">אנחנו מגיעים עם הכל –<br>דוכן מעוצב, ציוד ואהבה.<br>אתם רק נהנים מהרגע.</p>
+</article>
 </div>
-<div class="p-6 sm:p-8 bg-white rounded-xl copper-shadow border-t-4 border-secondary flex flex-col items-center">
-<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined text-[40px]">celebration</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm mb-4">אנרגיה ושמחה</h3>
-<p class="text-on-surface-variant">אנחנו לא רק מחלקים אוכל, אנחנו מרימים את האווירה עם מוזיקה וחיוך.</p>
-</div>
-<div class="p-6 sm:p-8 bg-white rounded-xl copper-shadow border-t-4 border-secondary flex flex-col items-center">
-<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined text-[40px]">temp_preferences_custom</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm mb-4">עיצוב מרהיב</h3>
-<p class="text-on-surface-variant">תפאורה מרוקאית מלכותית עם כלי נחושת, זהב ובדים עשירים.</p>
-</div>
-<div class="p-6 sm:p-8 bg-white rounded-xl copper-shadow border-t-4 border-secondary flex flex-col items-center">
-<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined text-[40px]">local_shipping</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm mb-4">ניידות מלאה</h3>
-<p class="text-on-surface-variant">אנחנו מגיעים לכל מקום בארץ עם כל הציוד הנדרש, מאורגנים ומוכנים.</p>
-</div>
+<div class="experience-photo my-6 sm:my-8 rounded-xl overflow-hidden aspect-[16/9] sm:aspect-[21/9] brand-shadow">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4QMEZuoGd5lU59iyYf2ptx53ZyTL5ar8PxjcDNZ7a8zIgg6KY497mGoSwWULAWdrICMaHPiyAdGH_eAHIQTCI1orRt97OSP6AR6kHrevbMOovyO0wVaJgI6rPv6bB9u1DYq66t7vGABnhvdYk5ecMlOk2BZ7YCtY4UocO1ohBCXEp-_FQjXPlIDb0xSD35-HkuJeBv2k-EMRxB61TGjcUTbTxGui6RMqtEMYxj7sxNrV-7_B-KThQoKDRK8HoEKUdgQM0cUbzGVRcRKA" alt="ספינג' ומופלטות מוזהבות על מגש מרוקאי מעוטר" class="w-full h-full object-cover" loading="lazy" width="800" height="600">
 </div>
 </div>
 </section>
-<!-- Promo Package Section -->
+<!-- Products Trio Section -->
+<section class="py-12 sm:py-16 bg-background">
+<div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+<article class="rounded-xl overflow-hidden brand-shadow bg-white">
+<div class="aspect-[4/3] overflow-hidden">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4QMEZuoGd5lU59iyYf2ptx53ZyTL5ar8PxjcDNZ7a8zIgg6KY497mGoSwWULAWdrICMaHPiyAdGH_eAHIQTCI1orRt97OSP6AR6kHrevbMOovyO0wVaJgI6rPv6bB9u1DYq66t7vGABnhvdYk5ecMlOk2BZ7YCtY4UocO1ohBCXEp-_FQjXPlIDb0xSD35-HkuJeBv2k-EMRxB61TGjcUTbTxGui6RMqtEMYxj7sxNrV-7_B-KThQoKDRK8HoEKUdgQM0cUbzGVRcRKA" alt="חם-חם מרוקאי טרי וקריספי" class="w-full h-full object-cover" loading="lazy" width="400" height="300">
+</div>
+<div class="p-4 sm:p-5 text-center sm:text-right">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">חם-חם</h3>
+<p class="text-on-surface-variant text-sm">קריספיים, חמים וטבולים בדבש – ביס קטן של שמחה.</p>
+</div>
+</article>
+<article class="rounded-xl overflow-hidden brand-shadow bg-white">
+<div class="aspect-[4/3] overflow-hidden">
+<img src="/assets/images/hero/hero-mobile.jpg" alt="ספינג' מרוקאי חם מהטיגון" class="w-full h-full object-cover" loading="lazy" width="768" height="1024">
+</div>
+<div class="p-4 sm:p-5 text-center sm:text-right">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">ספינג'</h3>
+<p class="text-on-surface-variant text-sm">מוזהב, רך מבפנים – נהנים מהריח עוד לפני הביס הראשון.</p>
+</div>
+</article>
+<article class="rounded-xl overflow-hidden brand-shadow bg-white">
+<div class="aspect-[4/3] overflow-hidden">
+<img src="/assets/images/hero/hero.jpg" alt="מופלטה דקה וטעימה עם חמאה ודבש" class="w-full h-full object-cover object-[65%_center]" loading="lazy" width="1024" height="768">
+</div>
+<div class="p-4 sm:p-5 text-center sm:text-right">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">מופלטה</h3>
+<p class="text-on-surface-variant text-sm">דקה, חמה ומוגשת עם חמאה ודבש – טעם של בית.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Package Section -->
 <section class="py-12 sm:py-16 lg:py-section-padding" id="packages">
 <div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter">
-<div class="bg-primary rounded-2xl sm:rounded-[2rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
-<div class="lg:w-1/2 p-6 sm:p-10 lg:p-20 text-on-primary">
-<h2 class="font-headline-lg text-headline-md lg:text-headline-lg mb-6 sm:mb-8">חבילת עמדה מרוקאית לאירוע בלתי נשכח</h2>
-<ul class="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary-fixed">check_circle</span>
-<span class="text-body-lg">ספינג' ומופלטה ללא הגבלה למשך 3 שעות של חגיגה</span>
+<div class="bg-primary rounded-2xl sm:rounded-[2rem] overflow-hidden shadow-2xl p-6 sm:p-10 lg:p-16 text-on-primary">
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg mb-6 sm:mb-8">חוויה מרוקאית מלאה</h2>
+<div class="text-secondary-fixed font-headline-lg text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 sm:mb-10">2,500 ₪</div>
+<ul class="space-y-4 sm:space-y-5 mb-8 sm:mb-10">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed shrink-0 mt-0.5">check_circle</span>
+<span class="text-body-lg">דוכן מעוצב</span>
 </li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary-fixed">check_circle</span>
-<span class="text-body-lg">2 אנשי צוות מקצועיים ואדיבים בלבוש מסורתי</span>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed shrink-0 mt-0.5">check_circle</span>
+<span class="text-body-lg">ספינג' חם-חם ומופלטה</span>
 </li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary-fixed">check_circle</span>
-<span class="text-body-lg">מתאים לאירועים של עד 150 אורחים</span>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed shrink-0 mt-0.5">check_circle</span>
+<span class="text-body-lg">הקמה ופירוק</span>
 </li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary-fixed">check_circle</span>
-<span class="text-body-lg">כולל תפאורה מרוקאית מלאה, כלי הגשה וכשרות מהדרין</span>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed shrink-0 mt-0.5">check_circle</span>
+<span class="text-body-lg">שירות לאורך האירוע</span>
 </li>
 </ul>
-<div class="mb-8 sm:mb-10">
-<div class="text-surface-variant line-through text-lg sm:text-xl">3,500 ₪</div>
-<div class="text-secondary-fixed font-headline-lg text-3xl sm:text-4xl lg:text-5xl font-bold">2,500 ₪ בלבד</div>
-</div>
+<p class="text-on-primary/90 text-body-md mb-8 sm:mb-10 leading-relaxed">
+                        רוצים להתאים את החוויה לאירוע שלכם?<br>
+                        יש גם אפשרות לתוספות בהתאמה אישית.
+                    </p>
 <a class="block sm:inline-block w-full sm:w-auto text-center bg-secondary-fixed text-on-secondary-fixed px-6 py-4 sm:px-10 sm:py-5 text-sm sm:text-base rounded-xl font-headline-sm hover:bg-white transition-colors break-words" href="#contact">
-                            לשריון תאריך ושריון המבצע - לחצו כאן
+                            לשריון תאריך – לחצו כאן
                         </a>
 </div>
-<div class="lg:w-1/2 min-h-[250px] sm:min-h-[350px] lg:min-h-[400px] relative">
-<div class="absolute inset-0 bg-cover bg-center" role="img" aria-label="ספינג' ומופלטות מוזהבות על מגש מרוקאי מעוטר" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB4QMEZuoGd5lU59iyYf2ptx53ZyTL5ar8PxjcDNZ7a8zIgg6KY497mGoSwWULAWdrICMaHPiyAdGH_eAHIQTCI1orRt97OSP6AR6kHrevbMOovyO0wVaJgI6rPv6bB9u1DYq66t7vGABnhvdYk5ecMlOk2BZ7YCtY4UocO1ohBCXEp-_FQjXPlIDb0xSD35-HkuJeBv2k-EMRxB61TGjcUTbTxGui6RMqtEMYxj7sxNrV-7_B-KThQoKDRK8HoEKUdgQM0cUbzGVRcRKA&quot;);"></div>
 </div>
-</div>
+</section>
+<!-- CTA Banner -->
+<section class="py-8 sm:py-12 bg-primary">
+<div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter text-center">
+<a class="inline-block bg-secondary-fixed text-on-secondary-fixed px-8 py-4 sm:px-12 sm:py-5 text-base sm:text-lg rounded-xl font-headline-sm hover:scale-105 transition-transform shadow-lg border-b-4 border-on-secondary-fixed-variant" href="#contact">
+                    לשריון תאריך – לחצו כאן
+                </a>
 </div>
 </section>
 <!-- Story Section -->
@@ -352,27 +401,30 @@
 <div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-center">
 <div class="lg:w-1/2 w-full">
 <div class="relative">
-<div class="rounded-2xl overflow-hidden copper-shadow border-4 sm:border-8 border-white">
-<img class="w-full aspect-square object-cover" alt="עינת, מייסדת חנה חינה, ליד תמונה של סבתא חנה במטבח מרוקאי מסורתי" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjBDPLe0ak7bAI8mECSIpc-HAaUIdsBcW8-CMDDZSRJ_MXuf_z-FLRPz_B0cjcnT3oxwBs6Mfseb6DO2Tqu0X9R1mjvzITI8JPfpyYU80bO9NvcDNNgzndwg7IfjIBWIN0UyvGZS_hdDUKBR0TZQBehgeerOEBnFN03WsdxEfALdca7oFWMqtTWxVVKgK3Jmrxk_cZsl-J_DXcqLeoLGpOtC6brDrItyynKlgWRDpxzIVqJXdicTqPa0JUt5uvaFHexuFlyLQT93_zbhs">
-</div>
-<div class="relative sm:absolute mt-4 sm:mt-0 sm:-bottom-6 sm:-right-6 bg-secondary-fixed p-4 sm:p-6 rounded-xl shadow-lg max-w-full sm:max-w-[200px]">
-<p class="text-primary font-bold italic text-sm sm:text-base">"המתכון הוא רק חצי מהסיפור, הנשמה היא החצי השני"</p>
+<div class="rounded-2xl overflow-hidden brand-shadow border-4 sm:border-8 border-white">
+<img class="w-full aspect-square object-cover" alt="עינת, מייסדת חנה חינה, ליד תמונה של סבתא חנה במטבח מרוקאי מסורתי" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjBDPLe0ak7bAI8mECSIpc-HAaUIdsBcW8-CMDDZSRJ_MXuf_z-FLRPz_B0cjcnT3oxwBs6Mfseb6DO2Tqu0X9R1mjvzITI8JPfpyYU80bO9NvcDNNgzndwg7IfjIBWIN0UyvGZS_hdDUKBR0TZQBehgeerOEBnFN03WsdxEfALdca7oFWMqtTWxVVKgK3Jmrxk_cZsl-J_DXcqLeoLGpOtC6brDrItyynKlgWRDpxzIVqJXdicTqPa0JUt5uvaFHexuFlyLQT93_zbhs" loading="lazy" width="600" height="600">
 </div>
 </div>
 </div>
 <div class="lg:w-1/2">
 <div class="ornate-border mb-6 sm:mb-10 pt-8 inline-block">
-<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-primary">הטעם של פעם, מהידיים של סבתא</h2>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-primary">לפני שהייתה חנה חינה, הייתה סבתא חנה</h2>
 </div>
 <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
-                        חנה חינה נולדה מתוך געגוע עמוק למטבח של סבתא חנה. הריח של הבצק התופח בבוקר, הידיים הזריזות שמטגנות ספינג' מוזהב, והאירוח שלא נגמר - ככה גדלתי.
+                        כל חגיגה התחילה אצלה במטבח, עם בצק שתפח לאט, מופלטה דקה וטעימה שהוגשה עם חמאה ודבש, ספינג' חם שהוכן באהבה, וחם־חם קטנטנים, קריספיים וטבולים בדבש.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
+                        ואירוח שלא היה צריך הזמנה מיוחדת.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
+                        גדלתי על הרגעים האלה, והם נשארו איתי.
                     </p>
 <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-10">
-                        היום, אני מביאה את כל המסורת הזו אליכם לאירוע. לא רק כעמדת אוכל, אלא כחלק בלתי נפרד מהנשמה של החגיגה שלכם. כל מופלטה נעשית באהבה, כל אורח מקבל חיוך, וכל פרט בעיצוב נבחר כדי להכניס אתכם לעולם הקסום של המגרב.
+                        היום אני לוקחת את אותם הטעמים, את אותה המסורת ואת אותה האהבה לאירוח, ומביאה אותם אל האירוע שלכם – כדי שגם אתם והאורחים שלכם תוכלו להרגיש את הקסם שגדלתי עליו. עינת מגיעה עם סינר כחלק מהשפה והנראות של המותג – אותנטית, חמה ומזמינה.
                     </p>
 <div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full border-2 border-secondary overflow-hidden">
-<img class="w-full h-full object-cover" alt="עינת, מייסדת חנה חינה" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzGWjmckGm8d_5SgSowW8tPrwApzX1jbRS5sQsXy5NXptNX0QOo8s90HieuXEeWc2nJCp7AYHHLAhKB8noJL40bIiTQgCUmWqGsPWajY9B0ERg6pAuOBnHpigHECLoQUI_YHCwufBDVXifhmt_f0gqEeDpIilCUeA15Us8zXjXHltic-7ziQJWf6aPOpWuSQeJI4PUQpInR34Vnyt5mojP4lEJYzB51Isr6zdvOc3m6fNT0qHofLoWxRMlo7H7BCYOKUAiYM_FFKXZ">
+<div class="w-12 h-12 rounded-full border-2 border-secondary-fixed overflow-hidden">
+<img class="w-full h-full object-cover" alt="עינת, מייסדת חנה חינה" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzGWjmckGm8d_5SgSowW8tPrwApzX1jbRS5sQsXy5NXptNX0QOo8s90HieuXEeWc2nJCp7AYHHLAhKB8noJL40bIiTQgCUmWqGsPWajY9B0ERg6pAuOBnHpigHECLoQUI_YHCwufBDVXifhmt_f0gqEeDpIilCUeA15Us8zXjXHltic-7ziQJWf6aPOpWuSQeJI4PUQpInR34Vnyt5mojP4lEJYzB51Isr6zdvOc3m6fNT0qHofLoWxRMlo7H7BCYOKUAiYM_FFKXZ" loading="lazy" width="48" height="48">
 </div>
 <div>
 <p class="font-bold text-primary">עינת, מייסדת חנה חינה</p>
@@ -386,8 +438,9 @@
 <section class="py-12 sm:py-16 lg:py-section-padding bg-surface-container" id="testimonials">
 <div class="max-w-container-max mx-auto px-margin-mobile sm:px-gutter text-center">
 <h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-primary mb-8 sm:mb-16">מה הלקוחות שלנו אומרים?</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-<div class="bg-white p-6 sm:p-8 rounded-2xl copper-shadow text-right relative">
+<div class="max-w-2xl mx-auto">
+<!-- אישור לקוח לפרסום -->
+<div class="bg-white p-6 sm:p-8 rounded-2xl brand-shadow text-right relative">
 <span class="material-symbols-outlined text-secondary-fixed absolute top-4 left-4 text-4xl opacity-50">format_quote</span>
 <div class="flex gap-1 text-secondary mb-4">
 <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
@@ -396,32 +449,11 @@
 <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
 <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
 </div>
-<p class="font-body-md text-body-md mb-6 italic">"עינת את פשוט מדהימה! העמדה הייתה גולת הכותרת של החינה. האורחים לא הפסיקו להחמיא על הטעם ועל האווירה שעשית."</p>
-<div class="font-bold text-primary">מיכל לוי, ירושלים</div>
-</div>
-<div class="bg-white p-6 sm:p-8 rounded-2xl copper-shadow text-right relative">
-<span class="material-symbols-outlined text-secondary-fixed absolute top-4 left-4 text-4xl opacity-50">format_quote</span>
-<div class="flex gap-1 text-secondary mb-4">
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-</div>
-<p class="font-body-md text-body-md mb-6 italic">"הגענו לעינת דרך המלצה וזו הייתה ההחלטה הכי טובה שלקחנו. הספינג' היה פשוט חלומי והעיצוב שדרג את האולם בטירוף."</p>
-<div class="font-bold text-primary">אורן כהן, תל אביב</div>
-</div>
-<div class="bg-white p-6 sm:p-8 rounded-2xl copper-shadow text-right relative">
-<span class="material-symbols-outlined text-secondary-fixed absolute top-4 left-4 text-4xl opacity-50">format_quote</span>
-<div class="flex gap-1 text-secondary mb-4">
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-</div>
-<p class="font-body-md text-body-md mb-6 italic">"שירות VIP, נקיון מופתי וטעם של עוד. העמדה הייתה מלאה כל הערב באנשים שמחים. ממליצה בחום!"</p>
-<div class="font-bold text-primary">ספיר אברהם, רחובות</div>
+<p class="font-body-md text-body-md mb-6 leading-relaxed">עינתיייי חיים שלללייייי ❤️<br>
+                        תקשיבייייי טובבבב אין אחדדדד שלא אמר אמאלללללה מה זה הטעם הזה, איזה לב יש לך, איזה לב!!!!!<br>
+                        היה מושלםםם ואת בעצמך מושלמת!!!! איזה כיף לי שזכית לחגוג איתנו את ערב החינה שלנו.<br>
+                        אוהבים אותך ❤️❤️❤️❤️❤️❤️</p>
+<div class="font-bold text-primary">שובל אהרון | עפולה</div>
 </div>
 </div>
 </div>
