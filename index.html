@@ -364,20 +364,45 @@
         .hero-gradient {
             background: linear-gradient(
                 to bottom,
-                rgba(28, 28, 24, 0.25) 0%,
-                rgba(28, 28, 24, 0.06) 35%,
-                transparent 60%
+                transparent 55%,
+                rgba(252, 249, 242, 0.4) 85%,
+                #fcf9f2 100%
             );
         }
 
         .hero-img {
             object-fit: cover;
-            object-position: 48% 62%;
+            object-position: center 18%;
         }
 
-        .hero-media {
-            min-height: 70svh;
-            max-height: 90svh;
+        .hero-layout {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-visual {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            max-height: min(62svh, 520px);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .hero-visual picture,
+        .hero-visual img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-copy {
+            position: relative;
+            z-index: 10;
+            padding: 0 1rem 1.5rem;
+            margin-top: 0;
         }
 
         .hero-content {
@@ -386,13 +411,11 @@
         }
 
         .hero-panel {
-            background: rgba(252, 249, 242, 0.94);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-radius: 1.25rem;
-            padding: 1.25rem 1.125rem;
-            box-shadow: 0 20px 50px -12px rgba(17, 111, 107, 0.18);
-            border: 1px solid rgba(255, 255, 255, 0.75);
+            background: #fcf9f2;
+            border-radius: 0;
+            padding: 1.5rem 0.25rem 1.75rem;
+            box-shadow: none;
+            border: none;
         }
 
         .hero-panel h1 {
@@ -405,63 +428,95 @@
 
         .hero-section {
             min-height: auto;
-            padding-top: 5rem;
-            padding-bottom: 1.5rem;
-            align-items: flex-start;
+            padding: 0;
+            align-items: stretch;
+            background: #fcf9f2;
         }
 
         @media (min-width: 640px) {
             .hero-gradient {
                 background: linear-gradient(
                     to left,
-                    rgba(28, 28, 24, 0.3) 0%,
-                    rgba(28, 28, 24, 0.08) 32%,
+                    rgba(28, 28, 24, 0.12) 0%,
+                    rgba(28, 28, 24, 0.04) 28%,
+                    transparent 52%
+                );
+            }
+
+            .hero-img {
+                object-position: 72% 38%;
+            }
+
+            .hero-layout {
+                position: relative;
+                z-index: 1;
+                min-height: 72vh;
+                justify-content: center;
+                max-width: 1200px;
+                margin-inline: auto;
+                padding-inline: 24px;
+            }
+
+            .hero-visual {
+                position: absolute;
+                inset: 0;
+                aspect-ratio: unset;
+                max-height: none;
+                z-index: 0;
+            }
+
+            .hero-copy {
+                margin-top: 0;
+                padding: 4rem 0;
+                max-width: 28rem;
+                margin-inline-start: auto;
+                margin-inline-end: 0;
+            }
+
+            .hero-panel {
+                background: rgba(252, 249, 242, 0.96);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-radius: 1.5rem;
+                padding: 2rem 1.75rem;
+                box-shadow: 0 20px 50px -12px rgba(17, 111, 107, 0.18);
+                border: 1px solid rgba(255, 255, 255, 0.75);
+            }
+
+            .hero-section {
+                min-height: 72vh;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-gradient {
+                background: linear-gradient(
+                    to left,
+                    rgba(28, 28, 24, 0.18) 0%,
+                    rgba(28, 28, 24, 0.06) 34%,
                     transparent 58%
                 );
             }
 
             .hero-img {
-                object-position: 65% center;
+                object-position: 68% 35%;
             }
 
-            .hero-media {
-                min-height: 75vh;
-                max-height: none;
-            }
-
-            .hero-content {
-                max-width: 26rem;
-                margin-inline-start: auto;
-            }
-
-            .hero-panel {
-                padding: 2rem 1.75rem;
-                border-radius: 1.5rem;
-            }
-
-            .hero-section {
-                min-height: 75vh;
-                padding-top: 4rem;
-                padding-bottom: 4rem;
-                align-items: center;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .hero-img {
-                object-position: 60% center;
-            }
-
-            .hero-content {
-                max-width: 30rem;
+            .hero-copy {
+                max-width: 32rem;
+                padding: 5rem 0;
             }
 
             .hero-panel {
                 padding: 2.5rem 2.25rem;
             }
 
+            .hero-layout {
+                min-height: 82vh;
+            }
+
             .hero-section {
-                min-height: 85vh;
+                min-height: 82vh;
             }
         }
 
@@ -570,17 +625,18 @@
 </div>
 <main class="pb-20 sm:pb-0">
 <!-- Hero Section -->
-<section class="hero-section relative flex overflow-hidden sm:py-16">
-<div class="absolute inset-0 z-0 hero-media">
-<picture class="absolute inset-0 w-full h-full">
+<section class="hero-section relative overflow-hidden">
+<div class="hero-visual">
+<picture class="block w-full h-full">
 <source media="(max-width: 639px)" srcset="/assets/images/hero/hero-mobile.webp" type="image/webp">
 <source media="(max-width: 639px)" srcset="/assets/images/hero/hero-mobile.jpg">
 <source srcset="/assets/images/hero/hero.webp" type="image/webp">
 <img src="/assets/images/hero/hero.jpg" alt="ברוכים הבאים למרוקו – עינת מגישה ספינג', מופלטה וחם-חם באירוע חגיגי" class="w-full h-full object-cover hero-img" fetchpriority="high" decoding="async" width="1024" height="768">
 </picture>
-<div class="absolute inset-0 hero-gradient"></div>
+<div class="absolute inset-0 hero-gradient pointer-events-none"></div>
 </div>
-<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile sm:px-gutter w-full">
+<div class="hero-layout">
+<div class="hero-copy w-full">
 <div class="hero-content hero-panel">
 <span class="inline-flex items-center gap-2 bg-secondary-fixed text-on-secondary-fixed px-3 py-1 sm:px-4 rounded-full text-xs sm:text-label-md font-label-md mb-4 sm:mb-5">
 <span class="material-symbols-outlined text-[16px] sm:text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
@@ -595,6 +651,7 @@
 <a class="block w-full sm:w-auto text-center bg-secondary-fixed text-on-secondary-fixed px-6 py-3.5 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl font-headline-sm hover:scale-[1.02] transition-transform shadow-md border-b-4 border-on-secondary-fixed-variant" href="#contact">
                             בדקו זמינות לתאריך האירוע שלכם
                         </a>
+</div>
 </div>
 </div>
 </section>
